@@ -40,7 +40,7 @@ function compare(changeText, value, metricKey, imperialKey, metricFunction, impe
 
 convertBtn.addEventListener("click", ()=>{
     let value = inputEl.value
-    compare(firstText,value, "meter", "feet", metric.meter(value), imperial.foot(value))
+    compare(firstText,value, "meters", "feet", metric.meter(value), imperial.foot(value))
     compare(secondText,value, "litres", "gallons", metric.litre(value), imperial.gallon(value))
     compare(thirdText,value, "kilograms", "pounds", metric.kilogram(value), imperial.pound(value))
 
