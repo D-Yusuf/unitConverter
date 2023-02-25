@@ -5,10 +5,49 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Converter</title>
-    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/index.css" />
   </head>
-  <body>
-    <h1 class="text-center text-2xl hover:text-[5rem] transition-all font-bold text-blue-900">Alo</h1>
-    
+  <body
+    class="flex min-h-screen text-center overflow-hidden items-center justify-center bg-primary"
+  >
+    <div class="container max-w-xl text-white">
+      <!-- HEADER -->
+      <header
+      class="font-bold flex flex-col items-center bg-purple max-w-full max-h-[285px] py-[34px] px-[50px]"
+      >
+      <h1 class="text-[28px]">Metric ⇄ Imperial Unit Conversion</h1>
+      <input
+      type="number"
+      value="0"
+      id="input-el"
+      min="1"
+      max="9999"
+      class="bg-purple border border-[#B295FF] rounded-md text-4xl text-center px-0 w-28 h-16 mt-6"
+      maxlength="4"
+      />
+      <button id="convert-btn" class="bg-white text-[#3D3D3D] py-[9px] px-7 rounded-lg mt-6">
+        Convert
+      </button>
+    </header>
+    <!--// HEADER //-->
+
+    <!-- MAIN -->
+    <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
+      <div class="bg-white p-5">
+        <h2 class="text-xl text-title font-bold">Length (Meter/Feet)</h2>
+        <p id="meter-feet" class="text-info">x meters = xx.xxx feet | x feet = x.xxx meters</p>
+      </div>  
+      <div class="bg-white p-5">
+        <h2 class="text-xl text-title font-bold">Volume (Litres/Gallons)</h2>
+        <p id="litre-gallon" class="text-info">x litres = xx.xxx gallons | x gallons = x.xxx litres</p>
+      </div>  
+      <div class="bg-white p-5">
+        <h2 class="text-xl text-title font-bold">Mass (Kilograms/Pounds)</h2>
+        <p id="kilogram-pound" class="text-info">x kilograms = xx.xxx pounds | x pounds = x.xxx kilograms</p>
+      </div>  
+    </main>
+    <!--// MAIN //-->
+    </div>
+    <script src="./src/app.js"></script>
   </body>
 </html>
