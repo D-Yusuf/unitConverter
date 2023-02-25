@@ -46,9 +46,4 @@ convertBtn.addEventListener("click", ()=>{
 
 
 })
-// console.log(imperial.foot(20));
-// console.log(imperial.gallon(20));
-// console.log(imperial.pound(20));
-// console.log(metric.meter(20));
-// console.log(metric.litre(20));
-// console.log(metric.kilogram(20));
+
