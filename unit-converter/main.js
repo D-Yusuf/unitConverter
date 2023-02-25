@@ -37,13 +37,15 @@ function compare(changeText, value, metricKey, imperialKey, metricFunction, impe
     changeText.innerText = `${value} ${metricKey} = ${imperialFunction} ${imperialKey} | ${value} ${imperialKey} = ${metricFunction} ${metricKey}`
   
 }
+// Self calling function
+function compareAll(){
+  let value = inputEl.value
+  compare(firstText,value, "meters", "feet", metric.meter(value), imperial.foot(value))
+  compare(secondText,value, "litres", "gallons", metric.litre(value), imperial.gallon(value))
+  compare(thirdText,value, "kilograms", "pounds", metric.kilogram(value), imperial.pound(value))
+}
 
-convertBtn.addEventListener("click", ()=>{
-    let value = inputEl.value
-    compare(firstText,value, "meters", "feet", metric.meter(value), imperial.foot(value))
-    compare(secondText,value, "litres", "gallons", metric.litre(value), imperial.gallon(value))
-    compare(thirdText,value, "kilograms", "pounds", metric.kilogram(value), imperial.pound(value))
+convertBtn.addEventListener("click",()=>compareAll())
+inputEl.addEventListener("focus", ()=>inputEl.value = "")
 
-
-})
 
